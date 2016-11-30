@@ -6,16 +6,16 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class MyActivity extends AppCompatActivity {
 
     private static final String TAB_KEY_INDEX = "tab_key";
-    private Fragment breakfastFragment;
-    private Fragment lunchFragment;
-    private Fragment snackFragment;
-    private Fragment dinnerFragment;
+    private Fragment dessertFragment;
+    private Fragment entreeFragment;
+    private Fragment appetizerFragment;
+
+    // old code
+    //private Fragment snackFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,28 +29,36 @@ public class MyActivity extends AppCompatActivity {
 
         // CREATE THE TABS AND BIND THEM TO THE ACTIONBAR
 
-        ActionBar.Tab breakfastTab = getSupportActionBar().newTab().setText(getString(R.string.ui_tabname_breakfast));
-        ActionBar.Tab lunchTab = getSupportActionBar().newTab().setText(getString(R.string.ui_tabname_lunch));
-        ActionBar.Tab snackTab = getSupportActionBar().newTab().setText(getString(R.string.ui_tabname_snack));
-        ActionBar.Tab dinnerTab = getSupportActionBar().newTab().setText(getString(R.string.ui_tabname_dinner));
+        ActionBar.Tab dessertTab = getSupportActionBar().newTab().setText(getString(R.string.ui_tabname_dessert));
+        ActionBar.Tab entreeTab = getSupportActionBar().newTab().setText(getString(R.string.ui_tabname_entree));
+        ActionBar.Tab appetizerTab = getSupportActionBar().newTab().setText(getString(R.string.ui_tabname_appetizer));
+
+        // old code
+        //ActionBar.Tab snackTab = getSupportActionBar().newTab().setText(getString(R.string.ui_tabname_snack));
 
         // CREATE EACH FRAGMENT AND BIND THEM TO THE ACTIONBAR
-        breakfastFragment = new BreakfastFragment();
-        snackFragment = new SnackFragment();
-        lunchFragment = new LunchFragment();
-        dinnerFragment = new DinnerFragment();
+        dessertFragment = new DessertFragment();
+        entreeFragment = new EntreeFragment();
+        appetizerFragment = new AppetizerFragment();
+
+        //old code
+        //snackFragment = new SnackFragment();
 
         // SET LISTENER EVENT FOR EACH OF THE ACTIONBAR TABS
-        breakfastTab.setTabListener(new MyTabsListener(breakfastFragment,getApplicationContext()));
-        snackTab.setTabListener(new MyTabsListener(snackFragment,getApplicationContext()));
-        lunchTab.setTabListener(new MyTabsListener(lunchFragment,getApplicationContext()));
-        dinnerTab.setTabListener(new MyTabsListener(dinnerFragment,getApplicationContext()));
+        dessertTab.setTabListener(new MyTabsListener(dessertFragment,getApplicationContext()));
+        //snackTab.setTabListener(new MyTabsListener(snackFragment,getApplicationContext()));
+        entreeTab.setTabListener(new MyTabsListener(entreeFragment,getApplicationContext()));
+        appetizerTab.setTabListener(new MyTabsListener(appetizerFragment,getApplicationContext()));
 
         // ADD EACH OF THE TABS TO THE ACTIONBAR
-        actionBar.addTab(breakfastTab);
-        actionBar.addTab(lunchTab);
-        actionBar.addTab(snackTab);
-        actionBar.addTab(dinnerTab);
+
+        actionBar.addTab(appetizerTab);
+        actionBar.addTab(entreeTab);
+        actionBar.addTab(dessertTab);
+
+        // old code
+        // actionBar.addTab(snackTab);
+
 
         //RESTORE NAVIGATION
 
