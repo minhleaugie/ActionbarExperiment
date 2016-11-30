@@ -3,7 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black">
+    >
+
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:text="@string/ui_appetizer_choice_fries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fries" />
+
+        <RadioButton
+            android:text="@string/ui_appetizer_choice_potato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/potato" />
+
+        <RadioButton
+            android:text="@string/ui_appetizer_choice_taco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/taco" />
+
+    </RadioGroup>
 
     <ImageView
         android:id="@+id/imageView"

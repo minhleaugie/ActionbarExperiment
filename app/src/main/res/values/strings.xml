@@ -8,4 +8,14 @@
     <string name="ui_tabname_snack">snack</string>
     <string name="ui_tabname_appetizer">Appetizer</string>
 
+    <string name="ui_appetizer_choice_fries">Fries</string>
+    <string name="ui_appetizer_choice_taco">Taco</string>
+    <string name="ui_appetizer_choice_potato">Smashed Potato</string>
+
+    <string name="ui_dessert_choice_chocolate_cake">Chocolate Cake</string>
+    <string name="ui_dessert_choice_ice_cream">Ice Cream</string>
+
+    <string name="ui_entree_choice_beef_steak">Beef Steak</string>
+    <string name="ui_entree_choice_chicken">Chicken</string>
+
 </resources>

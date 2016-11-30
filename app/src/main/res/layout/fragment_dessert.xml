@@ -3,7 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black">
+    >
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:text="@string/ui_dessert_choice_chocolate_cake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chocolate_cake" />
+
+        <RadioButton
+            android:text="@string/ui_dessert_choice_ice_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ice_cream" />
+
+
+    </RadioGroup>
 
     <ImageView
         android:id="@+id/imageView"

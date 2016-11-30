@@ -3,7 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black">
+    >
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:text="@string/ui_entree_choice_beef_steak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/beef_steak" />
+
+        <RadioButton
+            android:text="@string/ui_entree_choice_chicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chicken" />
+
+
+    </RadioGroup>
 
     <ImageView
         android:id="@+id/imageView"
