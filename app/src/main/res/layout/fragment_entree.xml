@@ -7,7 +7,8 @@
 
     <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:id="@+id/entree_choice">
 
         <RadioButton
             android:text="@string/ui_entree_choice_beef_steak"

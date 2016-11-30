@@ -46,9 +46,11 @@ public class MyActivity extends AppCompatActivity {
 
         // SET LISTENER EVENT FOR EACH OF THE ACTIONBAR TABS
         dessertTab.setTabListener(new MyTabsListener(dessertFragment,getApplicationContext()));
-        //snackTab.setTabListener(new MyTabsListener(snackFragment,getApplicationContext()));
         entreeTab.setTabListener(new MyTabsListener(entreeFragment,getApplicationContext()));
         appetizerTab.setTabListener(new MyTabsListener(appetizerFragment,getApplicationContext()));
+
+        //old code
+        //snackTab.setTabListener(new MyTabsListener(snackFragment,getApplicationContext()));
 
         // ADD EACH OF THE TABS TO THE ACTIONBAR
 
